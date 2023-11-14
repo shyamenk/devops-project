@@ -9,7 +9,7 @@ const connectDB = async () => {
     console.log("Successfully connected to MongoDB Database on PORT: 27017");
   } catch (error) {
     console.error(error);
-    setTimeout(connectWithRetry, 5000);
+    setTimeout(connectDB, 5000);
   }
 };
 
