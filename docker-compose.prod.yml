@@ -3,7 +3,7 @@ services:
   node:
     build:
       context: .
-      dockerfile: Dockerfile
+      target: production
     environment:
       - NODE_ENV=production
     command: node index.js

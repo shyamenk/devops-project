@@ -3,7 +3,7 @@ services:
   node:
     build:
       context: .
-      dockerfile: Dockerfile.dev
+      target: development
     volumes:
       - ./:/app:ro
       - /app/node_modules

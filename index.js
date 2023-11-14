@@ -1,6 +1,13 @@
 const express = require("express");
-
+const mongoose = require("mongoose");
 const app = express();
+
+mongoose
+  .connect("mongodb://root:example@mongo:27017/?authSource=admin")
+  .then(() =>
+    console.log("Succsesfully connected to MongoDB Databaseon PORT: 27017")
+  )
+  .catch((e) => console.log(e));
 
 app.get("/", (req, res) => {
   res.send("<h2>Dockerdwdef Hub</h2>");
